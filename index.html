@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>WatBeiWatt - Interessante Schnelladesäulen in Deutschland</title>
+    <title>WatBeiWatt - Schnellladesäulen in Deutschland ohne Ladeweile</title>
 
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -152,7 +152,7 @@
             } else if ( feature.properties["Pub"] > 0 ) {
                 icon = new LeafIcon({iconUrl: 'web/img/amenity_pub.png'})
             }  else if ( feature.properties["Nachtclub"] > 0 ) {
-                icon = new LeafIcon({iconUrl: 'web/img/nightclub.png'})
+                icon = new LeafIcon({iconUrl: 'web/img/amenity_nightclub.png'})
             } else if ( feature.properties["Kunstausstellung"] > 0 ) {
                 icon = new LeafIcon({iconUrl: 'web/img/amenity_arts_centre.png'})
             } else if ( feature.properties["Touristisches"] > 0 ) {
@@ -209,7 +209,7 @@
                     } else if ( p === "Touristisches" ) {
                         imgUrl = 'web/img/tourism_information.png'
                     } else if ( p === "Nachtclub" ) {
-                        imgUrl = 'web/img/nightclub.png'
+                        imgUrl = 'web/img/amenity_nightclub.png'
                     } else if ( p === "Kunstausstellung" ) {
                         imgUrl ='web/img/amenity_arts_centre.png'
                     }
@@ -273,7 +273,7 @@
         }
     }).addTo(map);
 
-    var helloPopup = L.popup().setContent('Hier kommt eine Erklärung hin!');
+    var helloPopup = L.popup().setContent('Keine Lust auf Ladeweile ? Wir haben Schnellladesäulen mit Möglichkeiten des Entertainment gefunden, die wesentlichen Services, die im Umkreis von 150m der Ladesäule zu finden sind, haben wir in der Karte markiert. Gibt es mehrere, dann finden Sie diese alle in der Infobox. Einfach auf die Ladesäule klicken, dann weisste Bescheid. <p> Wir wünschen allzeit gute Fahrt und wenig Ladeweile!</p>');
 
     L.easyButton('fa-question', function(btn, map){
         helloPopup.setLatLng(map.getCenter()).openOn(map);
